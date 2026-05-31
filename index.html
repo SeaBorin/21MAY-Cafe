@@ -1,0 +1,146 @@
+<!doctype html>
+<html>
+  <head>
+    <title>W3.CSS Template</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/5/w3.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Karma"
+    />
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+  <body>
+    <!-- ================= SIDEBAR (Mobile Menu) ================= -->
+    <nav
+      class="w3-sidebar w3-bar-block w3-card w3-top w3-xlarge w3-animate-left w3-hide-medium w3-hide-large custom-sidebar"
+      id="mySidebar"
+    >
+      <a
+        href="javascript:void(0)"
+        onclick="w3_close()"
+        class="w3-bar-item w3-button sidebar-close-btn"
+      >
+        Close &times;
+      </a>
+      <a
+        href="#home"
+        onclick="w3_close()"
+        class="w3-bar-item w3-button sidebar-link"
+        >Home</a
+      >
+      <a
+        href="#menu-pricing"
+        onclick="w3_close()"
+        class="w3-bar-item w3-button sidebar-link"
+        >Menu & Pricing</a
+      >
+      <a
+        href="#about"
+        onclick="w3_close()"
+        class="w3-bar-item w3-button sidebar-link"
+        >About</a
+      >
+      <a
+        href="#team"
+        onclick="w3_close()"
+        class="w3-bar-item w3-button sidebar-link"
+        >Team</a
+      >
+      <a
+        href="#contact"
+        onclick="w3_close()"
+        class="w3-bar-item w3-button sidebar-link"
+        >Contact</a
+      >
+    </nav>
+
+    <!-- ================= TOP NAVIGATION MENU ================= -->
+    <div class="w3-top main-navbar">
+      <div class="w3-xlarge navbar-container">
+        <!-- Logo / Cafe Name -->
+        <div class="w3-padding-16 logo-wrapper">
+          <a href="#home" class="logo-text"
+            >21MAY<span class="logo-dot">.</span></a
+          >
+        </div>
+
+        <!-- Mobile Burger Menu Button -->
+        <div
+          class="w3-button w3-padding-16 w3-hide-medium w3-hide-large nav-mobile-toggle"
+          onclick="w3_open()"
+        >
+          ☰
+        </div>
+
+        <!-- Desktop Navigation Links -->
+        <div class="w3-hide-small nav-links-container">
+          <a
+            href="#home"
+            class="w3-bar-item w3-button w3-medium custom-nav-link active-nav"
+            >Home</a
+          >
+          <a
+            href="#menu-pricing"
+            class="w3-bar-item w3-button w3-medium custom-nav-link"
+            >Menu & Pricing</a
+          >
+          <a
+            href="#about"
+            class="w3-bar-item w3-button w3-medium custom-nav-link"
+            >About</a
+          >
+          <a
+            href="#team"
+            class="w3-bar-item w3-button w3-medium custom-nav-link"
+            >Team</a
+          >
+          <a
+            href="#contact"
+            class="w3-bar-item w3-button w3-medium custom-nav-link"
+            >Contact</a
+          >
+        </div>
+      </div>
+    </div>
+
+    <!-- !PAGE CONTENT! -->
+    <main class="content-container">
+      <section class="hero">
+        <div class="hero-left">
+          <h1 class="hero-title">
+            Your Daily Dose of<br /><span class="text-accent"
+              >Green & Gold</span
+            >
+          </h1>
+          <p class="hero-description">
+            Sip into perfection with our premium handcrafted Matcha creations
+            and expertly roasted specialty coffees. Made fresh daily to elevate
+            your morning routine.
+          </p>
+          <a href="#menu-pricing" class="hero-button">Explore Our Menu</a>
+        </div>
+        <div class="hero-right">
+          <div class="img-container">
+            <div class="img-backdrop"></div>
+            <img
+              src="./images/coffee/Iced-Coffee.png"
+              alt="Signature Iced Coffee"
+            />
+          </div>
+        </div>
+      </section>
+    </main>
+    <script>
+      // Script to open and close sidebar
+      function w3_open() {
+        document.getElementById("mySidebar").style.display = "block";
+      }
+
+      function w3_close() {
+        document.getElementById("mySidebar").style.display = "none";
+      }
+    </script>
+  </body>
+</html>

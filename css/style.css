@@ -1,0 +1,311 @@
+@import url("https://fonts.googleapis.com/css2?family=Koulen&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Poppins", sans-serif;
+}
+.w3-bar-block .w3-bar-item {
+  padding: 20px;
+}
+
+.creamy {
+  background-color: #f4f4f0;
+}
+
+/* ==========================================================================
+   NAVIGATION & SIDEBAR BRAND STYLES (Match Hero Section)
+   ========================================================================== */
+
+/* --- Main Desktop Navbar Container --- */
+.main-navbar {
+  z-index: 3;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+  background-color: #f4f4f0 !important; /* Premium off-white base background */
+}
+
+.navbar-container {
+  max-width: 1200px;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  z-index: 3;
+  background-color: #f4f4f0;
+}
+
+/* --- Branding Logo Customization --- */
+.logo-wrapper {
+  padding-left: 16px;
+}
+
+.logo-text {
+  text-decoration: none;
+  font-weight: 700;
+  color: #2c3e2b; /* Deep Matcha Forest Green */
+  font-family: "Karma", serif;
+  letter-spacing: 1px;
+}
+
+.logo-dot {
+  color: #bfa15f; /* Elegant Coffee Gold */
+}
+
+/* --- Desktop Links Styling & Animations --- */
+.nav-links-container {
+  padding-right: 16px;
+}
+
+.custom-nav-link {
+  display: inline-block;
+  font-family: "Karma", serif;
+  font-weight: 600;
+  color: #555550 !important;
+  background-color: transparent !important;
+  transition: all 0.3s ease !important;
+  position: relative;
+  margin: 0 4px;
+}
+
+.custom-nav-link:hover {
+  color: #2c3e2b !important;
+  transform: translateY(-1px);
+}
+
+/* Sliding gold line accent underneath desktop navigation on hover */
+.custom-nav-link::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: 8px;
+  left: 50%;
+  background-color: #bfa15f;
+  transition: all 0.3s ease;
+  transform: translateX(-50%);
+}
+
+.custom-nav-link:hover::after {
+  width: 60%;
+}
+
+/* Highlights the active page style */
+.active-nav {
+  color: #2c3e2b !important;
+}
+
+.active-nav::after {
+  width: 60% !important;
+}
+
+/* --- Mobile Menu Toggle Button --- */
+.nav-mobile-toggle {
+  color: #2c3e2b;
+}
+
+.nav-mobile-toggle:hover {
+  background-color: transparent !important;
+  color: #bfa15f !important;
+}
+
+/* --- Mobile Sidebar Navigation Panel --- */
+.custom-sidebar {
+  display: none;
+  z-index: 4;
+  width: 60%;
+  min-width: 250px;
+  background-color: #f4f4f0 !important; /* Unified background consistency */
+  padding: 20px 10px;
+}
+
+.sidebar-close-btn {
+  font-family: "Karma", serif;
+  color: #888880 !important;
+  font-weight: bold;
+  text-align: right;
+  background-color: transparent !important;
+  transition: color 0.3s ease;
+}
+
+.sidebar-close-btn:hover {
+  color: #bfa15f !important; /* Gold on close hover */
+}
+
+.sidebar-link {
+  font-family: "Karma", serif;
+  font-weight: 600;
+  color: #2c3e2b !important; /* Matcha Green on layout options */
+  padding: 16px 24px !important;
+  background-color: transparent !important;
+  border-left: 4px solid transparent;
+  transition: all 0.3s ease;
+}
+
+/* Draws a solid vertical gold ribbon selector line on mobile menu selection hover */
+.sidebar-link:hover {
+  background-color: rgba(
+    191,
+    161,
+    95,
+    0.08
+  ) !important; /* Soft coffee mist tone */
+  color: #bfa15f !important; /* Gold text highlight */
+  border-left: 4px solid #bfa15f;
+  padding-left: 30px !important; /* Smooth push effect to the right */
+}
+
+/* --- Base Container Optimization --- */
+.content-container {
+  max-width: 1200px;
+  min-height: 80vh; /* Changed from 100vh to protect content spacing on small screens */
+  margin: 120px auto 40px auto; /* Clean spacing beneath fixed navbar */
+  background-color: #f4f4f0;
+  border-radius: 12px; /* Smoother, modern curves */
+  padding: 20px;
+  display: flex;
+  align-items: center;
+}
+
+/* --- Hero Grid Layout --- */
+.hero {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+  padding: 40px;
+}
+
+/* --- Left Text Side --- */
+.hero-left {
+  flex: 1;
+  max-width: 550px;
+}
+
+.hero-title {
+  font-family: "Karma", serif;
+  font-size: 3.5rem;
+  font-weight: 700;
+  line-height: 1.2;
+  color: #2c3e2b; /* Deep Matcha Forest Green */
+  margin-bottom: 20px;
+}
+
+/* Accent for "Green & Gold" */
+.text-accent {
+  color: #bfa15f; /* Elegant Coffee Gold */
+}
+
+.hero-description {
+  font-size: 1.15rem;
+  line-height: 1.7;
+  color: #555550;
+  margin-bottom: 35px;
+}
+
+/* --- Golden CTA Button --- */
+.hero-button {
+  display: inline-block;
+  background-color: #bfa15f; /* Gold base */
+  color: #ffffff;
+  font-weight: bold;
+  font-size: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  padding: 16px 36px;
+  border: none;
+  border-radius: 50px; /* Pillow capsule shape */
+  cursor: pointer;
+  text-decoration: none;
+  box-shadow: 0 4px 15px rgba(191, 161, 95, 0.3);
+  transition: all 0.3s ease;
+}
+
+.hero-button:hover {
+  background-color: #2c3e2b; /* Shifts smoothly to matcha green */
+  box-shadow: 0 6px 20px rgba(44, 62, 43, 0.4);
+  transform: translateY(-3px);
+}
+
+/* --- Right Visual Side --- */
+.hero-right {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.img-container {
+  position: relative;
+  width: 100%;
+  max-width: 400px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Abstract soft shapes behind your transparent product images */
+.img-backdrop {
+  position: absolute;
+  width: 280px;
+  height: 280px;
+  background: linear-gradient(135deg, #e4ded0 0%, #d5cdbc 100%);
+  border-radius: 40% 60% 70% 30% / 40% 50% 60% 50%; /* Organic liquid blob shape */
+  z-index: 1;
+  animation: morphBlob 8s ease-in-out infinite alternate;
+}
+
+.img-container img {
+  position: relative;
+  max-width: 100%;
+  height: auto;
+  max-height: 450px;
+  object-fit: contain;
+  z-index: 2;
+  filter: drop-shadow(4px 12px 20px rgba(0, 0, 0, 0.15));
+  transition: transform 0.5s ease;
+}
+
+/* Smooth float action when hovering over the drink image */
+.img-container:hover img {
+  transform: translateY(-10px) rotate(2deg);
+}
+
+/* --- Subtle Backdrop Animation --- */
+@keyframes morphBlob {
+  0% {
+    border-radius: 40% 60% 70% 30% / 40% 50% 60% 50%;
+  }
+  100% {
+    border-radius: 70% 30% 50% 50% / 30% 60% 40% 70%;
+  }
+}
+
+/* --- Responsive Adaptations (Mobile & Tablet) --- */
+@media (max-width: 900px) {
+  .content-container {
+    margin-top: 80px;
+    padding: 10px;
+  }
+  .hero {
+    flex-direction: column-reverse; /* Puts image safely on top for vertical mobile viewing */
+    text-align: center;
+    padding: 24px;
+    gap: 30px;
+  }
+  .hero-title {
+    font-size: 2.5rem;
+  }
+  .img-container {
+    max-width: 280px;
+  }
+  .img-backdrop {
+    width: 200px;
+    height: 200px;
+  }
+}
