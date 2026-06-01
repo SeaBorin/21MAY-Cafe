@@ -1,0 +1,49 @@
+/* ==========================================================================
+   MOBILE SIDEBAR SLIDE-OUT MENU STYLES
+   ========================================================================== */
+
+.custom-sidebar {
+  display: none;
+  z-index: 6;
+  width: 70%;
+  max-width: 300px;
+  background-color: #f4f4f0 !important; /* Unified background consistency */
+  padding: 30px 15px;
+}
+
+.sidebar-close-btn {
+  font-family: "Karma", serif;
+  color: #888880 !important;
+  font-weight: bold;
+  text-align: right;
+  background-color: transparent !important;
+  transition: color 0.3s ease;
+  padding: 12px 24px !important;
+}
+
+.sidebar-close-btn:hover {
+  color: #bfa15f !important; /* Gold on close hover */
+}
+
+.sidebar-link {
+  font-family: "Karma", serif;
+  font-weight: 600;
+  color: #2c3e2b !important; /* Matcha Green text */
+  padding: 16px 24px !important;
+  background-color: transparent !important;
+  border-left: 4px solid transparent;
+  transition: all 0.3s ease;
+}
+
+/* Draws a solid vertical gold ribbon selector line on mobile menu hover */
+.sidebar-link:hover {
+  background-color: rgba(
+    191,
+    161,
+    95,
+    0.08
+  ) !important; /* Soft coffee mist tone */
+  color: #bfa15f !important; /* Gold text highlight */
+  border-left: 4px solid #bfa15f;
+  padding-left: 32px !important; /* Smooth push effect to the right */
+}

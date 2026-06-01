@@ -1,0 +1,88 @@
+/* ==========================================================================
+   TOP NAVIGATION BAR STYLES (Match Cafe Brand Palette)
+   ========================================================================== */
+
+.main-navbar {
+  z-index: 5;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+  background-color: #f4f4f0 !important; /* Premium off-white base */
+}
+
+.navbar-container {
+  max-width: 1200px;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  background-color: #f4f4f0;
+  padding: 10px 16px; /* Replaced aggressive margins with accurate padding alignment */
+}
+
+/* --- Branding Logo Customization --- */
+.logo-text {
+  text-decoration: none;
+  font-weight: 700;
+  color: #2c3e2b; /* Deep Matcha Forest Green */
+  font-family: "Karma", serif;
+  letter-spacing: 1px;
+}
+
+.logo-dot {
+  color: #bfa15f; /* Elegant Coffee Gold */
+}
+
+/* --- Desktop Links Styling & Animations --- */
+.custom-nav-link {
+  display: inline-block;
+  font-family: "Karma", serif;
+  font-weight: 600;
+  color: #555550 !important;
+  background-color: transparent !important;
+  transition: all 0.3s ease !important;
+  position: relative;
+  margin: 0 8px;
+  padding: 8px 4px !important;
+}
+
+.custom-nav-link:hover {
+  color: #2c3e2b !important;
+  transform: translateY(-1px);
+}
+
+/* Sliding gold line accent underneath desktop navigation on hover */
+.custom-nav-link::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: 0;
+  left: 50%;
+  background-color: #bfa15f;
+  transition: all 0.3s ease;
+  transform: translateX(-50%);
+}
+
+.custom-nav-link:hover::after {
+  width: 80%;
+}
+
+/* Highlights the active page style */
+.active-nav {
+  color: #2c3e2b !important;
+}
+
+.active-nav::after {
+  width: 80% !important;
+}
+
+/* --- Mobile Menu Toggle Button (Hamburger) --- */
+.nav-mobile-toggle {
+  color: #2c3e2b;
+  cursor: pointer;
+}
+
+.nav-mobile-toggle:hover {
+  background-color: transparent !important;
+  color: #bfa15f !important;
+}

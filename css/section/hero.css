@@ -1,0 +1,151 @@
+/* ==========================================================================
+   HERO BANNER SPLIT GRID LAYOUT 
+   ========================================================================== */
+
+.hero-wrapper {
+  max-width: 1200px;
+  min-height: 80vh;
+  margin: 120px auto 40px auto; /* Clean spacing beneath fixed navbar */
+  background-color: #f4f4f0;
+  border-radius: 12px; /* Modern smooth corners */
+  padding: 20px;
+  display: flex;
+  align-items: center;
+}
+
+.hero {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+  padding: 40px;
+}
+
+/* --- Left Text Side --- */
+.hero-left {
+  flex: 1;
+  max-width: 550px;
+}
+
+.hero-title {
+  font-family: "Karma", serif;
+  font-size: 3.5rem;
+  font-weight: 700;
+  line-height: 1.2;
+  color: #2c3e2b; /* Deep Matcha Green */
+  margin-bottom: 20px;
+}
+
+.text-accent {
+  color: #bfa15f; /* Elegant Coffee Gold */
+}
+
+.hero-description {
+  font-size: 1.15rem;
+  line-height: 1.7;
+  color: #555550;
+  margin-bottom: 35px;
+}
+
+/* --- Golden CTA Button --- */
+.hero-button {
+  display: inline-block;
+  background-color: #bfa15f;
+  color: #ffffff;
+  font-weight: bold;
+  font-size: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  padding: 16px 36px;
+  border: none;
+  border-radius: 50px; /* Pillow shape */
+  cursor: pointer;
+  text-decoration: none;
+  box-shadow: 0 4px 15px rgba(191, 161, 95, 0.3);
+  transition: all 0.3s ease;
+}
+
+.hero-button:hover {
+  background-color: #2c3e2b; /* Shift smoothly to matcha green */
+  box-shadow: 0 6px 20px rgba(44, 62, 43, 0.4);
+  transform: translateY(-3px);
+}
+
+/* --- Right Image Visual Side --- */
+.hero-right {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.img-container {
+  position: relative;
+  width: 100%;
+  max-width: 400px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Liquid fluid backdrop shape behind your drink transparent image */
+.img-backdrop {
+  position: absolute;
+  width: 280px;
+  height: 280px;
+  background: linear-gradient(135deg, #e4ded0 0%, #d5cdbc 100%);
+  border-radius: 40% 60% 70% 30% / 40% 50% 60% 50%;
+  z-index: 1;
+  animation: morphBlob 8s ease-in-out infinite alternate;
+}
+
+.img-container img {
+  position: relative;
+  max-width: 100%;
+  height: auto;
+  max-height: 450px;
+  object-fit: contain;
+  z-index: 2;
+  filter: drop-shadow(4px 12px 20px rgba(0, 0, 0, 0.15));
+  transition: transform 0.5s ease;
+}
+
+/* Float action when user hovers over the image container */
+.img-container:hover img {
+  transform: translateY(-10px) rotate(2deg);
+}
+
+/* --- Backdrop Morphing Animation --- */
+@keyframes morphBlob {
+  0% {
+    border-radius: 40% 60% 70% 30% / 40% 50% 60% 50%;
+  }
+  100% {
+    border-radius: 70% 30% 50% 50% / 30% 60% 40% 70%;
+  }
+}
+
+/* --- Responsive Adaptations (Mobile & Tablet) --- */
+@media (max-width: 900px) {
+  .hero-wrapper {
+    margin-top: 80px;
+    padding: 10px;
+  }
+  .hero {
+    flex-direction: column-reverse; /* Stack image gracefully on top for mobile views */
+    text-align: center;
+    padding: 24px;
+    gap: 30px;
+  }
+  .hero-title {
+    font-size: 2.5rem;
+  }
+  .img-container {
+    max-width: 280px;
+  }
+  .img-backdrop {
+    width: 200px;
+    height: 200px;
+  }
+}

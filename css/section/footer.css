@@ -1,0 +1,183 @@
+/* ==========================================================================
+   FOOTER & CONTACT SECTION STYLES
+   ========================================================================== */
+
+.site-footer {
+  background-color: #fbf9f6; /* Warm cream background */
+  padding: 80px 20px 30px 20px;
+  margin-top: 100px;
+  border-top: 1px solid #eadecc;
+}
+
+.footer-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1.2fr 1fr 1fr;
+  gap: 50px;
+}
+
+/* --- General Column Styles --- */
+.footer-column {
+  display: flex;
+  flex-direction: column;
+}
+
+.footer-heading {
+  font-family: "Karma", serif;
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: #2c3e2b; /* Deep Matcha Green */
+  margin-bottom: 20px;
+  position: relative;
+}
+
+/* --- Brand Column --- */
+.footer-logo {
+  font-family: "Karma", serif;
+  font-size: 2rem;
+  font-weight: 700;
+  color: #2c3e2b;
+  text-decoration: none;
+  margin-bottom: 15px;
+  display: inline-block;
+}
+
+.footer-logo .logo-dot {
+  color: #bfa15f; /* Gold Accent */
+}
+
+.footer-tagline {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: #6a6a60;
+  max-width: 280px;
+}
+
+/* --- Contact List Column --- */
+.footer-links-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-links-list li {
+  display: flex;
+  align-items: center;
+  margin-bottom: 14px;
+  font-size: 0.95rem;
+  color: #555550;
+}
+
+.contact-icon {
+  margin-right: 12px;
+  font-size: 1.1rem;
+}
+
+.contact-link {
+  color: #555550;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.contact-link:hover {
+  color: #bfa15f; /* Highlights to Coffee Gold */
+}
+
+/* --- Social Media Column --- */
+.social-description {
+  font-size: 0.95rem;
+  line-height: 1.5;
+  color: #6a6a60;
+  margin-bottom: 18px;
+}
+
+.social-icons-grid {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap; /* Ensures the 5 icons wrap perfectly on small mobile screens */
+}
+
+.social-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 42px;
+  height: 42px;
+  background-color: #ffffff;
+  border: 1px solid #eadecc;
+  border-radius: 50%;
+  text-decoration: none;
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+.social-icon-img {
+  font-size: 1.2rem;
+  color: #2c3e2b; /* Brand Matcha Green */
+  transition: color 0.3s ease;
+}
+
+/* Social Hover Micro-interactions */
+.social-btn:hover {
+  background-color: #2c3e2b; /* Inverts color block to matcha */
+  border-color: #2c3e2b;
+  transform: translateY(-3px);
+}
+
+.social-btn:hover .social-icon-img {
+  color: #ffffff; /* Changes brand icon white on hover */
+}
+
+/* --- Divider Bar --- */
+.footer-divider {
+  border: 0;
+  height: 1px;
+  background-color: #eadecc;
+  max-width: 1200px;
+  margin: 50px auto 25px auto;
+}
+
+/* --- Bottom Copyright Reserved Section --- */
+.footer-bottom {
+  text-align: center;
+}
+
+.copyright-text {
+  font-size: 0.85rem;
+  color: #8c8c80;
+  letter-spacing: 0.3px;
+}
+
+/* ==========================================================================
+   MEDIA QUERIES (Footer Responsiveness)
+   ========================================================================== */
+
+/* Tablet Optimization Layout */
+@media (max-width: 992px) {
+  .footer-container {
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+  }
+  .brand-info {
+    grid-column: span 2; /* Brand label takes full width line */
+    margin-bottom: 10px;
+  }
+}
+
+/* Mobile Small Screen Fluid Stack */
+@media (max-width: 600px) {
+  .site-footer {
+    padding: 60px 20px 25px 20px;
+    margin-top: 60px;
+  }
+  .footer-container {
+    grid-template-columns: 1fr; /* Complete clean collapse stack */
+    gap: 35px;
+  }
+  .brand-info {
+    grid-column: span 1;
+  }
+  .footer-divider {
+    margin: 40px auto 20px auto;
+  }
+}
